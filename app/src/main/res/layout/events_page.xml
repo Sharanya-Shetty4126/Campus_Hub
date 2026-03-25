@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F0E8"
+    android:orientation="vertical">
+
+    <!-- Header (same as before) -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/coffee_header_bg"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBack"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="←"
+                android:textSize="28sp"
+                android:textColor="#2C1B14"
+                android:background="@drawable/coffee_button_bg"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="☕ Coffee Events"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="#2C1B14"
+                android:gravity="center"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAddEvent"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="@drawable/coffee_button_bg"
+                app:backgroundTint="@null"
+                android:text="+"
+                android:textSize="28sp"
+                android:textColor="#2C1B14"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/steam1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="~~~"
+            android:textSize="20sp"
+            android:textColor="#D4B895"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="20dp"
+            android:alpha="0.6"/>
+
+        <TextView
+            android:id="@+id/steam2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="~~~"
+            android:textSize="16sp"
+            android:textColor="#D4B895"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="40dp"
+            android:alpha="0.4"/>
+
+    </RelativeLayout>
+
+    <!-- Coffee Quote -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="✨ Brewing exciting events for you! ✨"
+        android:textSize="14sp"
+        android:textColor="#8B5A2B"
+        android:gravity="center"
+        android:padding="12dp"
+        android:fontStyle="italic"/>
+
+    <!-- Filter Chips -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipAll"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="☕ All Events"
+                android:textColor="#2C1B14"
+                app:chipBackgroundColor="#D4B895"
+                app:chipStrokeColor="#8B5A2B"
+                app:chipStrokeWidth="1dp"
+                android:checked="true"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipTech"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="💻 Tech Brew"
+                android:textColor="#2C1B14"
+                app:chipBackgroundColor="#ebdfce"
+                app:chipStrokeColor="#8B5A2B"
+                app:chipStrokeWidth="1dp"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipArt"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="🎨 Latte Art"
+                android:textColor="#2C1B14"
+                app:chipBackgroundColor="#ebdfce"
+                app:chipStrokeColor="#8B5A2B"
+                app:chipStrokeWidth="1dp"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipSports"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="⚽ Coffee Kickoff"
+                android:textColor="#2C1B14"
+                app:chipBackgroundColor="#ebdfce"
+                app:chipStrokeColor="#8B5A2B"
+                app:chipStrokeWidth="1dp"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipMusic"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🎵 Jazz &amp; Coffee"
+                android:textColor="#2C1B14"
+                app:chipBackgroundColor="#ebdfce"
+                app:chipStrokeColor="#8B5A2B"
+                app:chipStrokeWidth="1dp"/>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- Events List (Scrollable) -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Include all event cards -->
+            <include layout="@layout/event_card_coffee_code"/>
+            <include layout="@layout/event_card_latte_art"/>
+            <!-- Add more event cards here -->
+            <!-- <include layout="@layout/event_card_coffee_sports"/> -->
+            <!-- <include layout="@layout/event_card_jazz_night"/> -->
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

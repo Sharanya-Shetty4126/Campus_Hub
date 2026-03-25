@@ -1,0 +1,11 @@
+
+<resources xmlns:tools="http://schemas.android.com/tools">
+<style name="Base.Theme.BMS_COLLEGE_PROJECT" parent="Theme.Material3.DayNight.NoActionBar">
+
+    <!-- Add this line -->
+    <item name="materialButtonStyle">@style/Widget.AppCompat.Button</item>
+
+</style>
+
+<style name="Theme.BMS_COLLEGE_PROJECT" parent="Base.Theme.BMS_COLLEGE_PROJECT" />
+</resources>

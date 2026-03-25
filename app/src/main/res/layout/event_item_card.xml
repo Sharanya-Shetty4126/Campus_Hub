@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardEvent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="#ebdfce">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Coffee Cup Icon and Title Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvEventIcon"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:text="☕"
+                android:textSize="40sp"
+                android:gravity="center"
+                android:background="@drawable/coffee_icon_bg"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="16dp">
+
+                <TextView
+                    android:id="@+id/tvEventTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Coffee &amp;Code"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#2C1B14"/>
+
+                <TextView
+                    android:id="@+id/tvEventCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="💻 Tech Brew"
+                    android:textSize="12sp"
+                    android:textColor="#8B5A2B"
+                    android:layout_marginTop="4dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvEventDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mar 25"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#2C1B14"
+                android:background="@drawable/date_badge_bg"
+                android:padding="8dp"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <!-- Quick Info Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⏰"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/tvEventTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="2:00 PM - 5:00 PM"
+                android:textSize="14sp"
+                android:textColor="#2C1B14"
+                android:layout_marginStart="6dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📍"
+                android:textSize="14sp"
+                android:layout_marginStart="12dp"/>
+
+            <TextView
+                android:id="@+id/tvEventLocationShort"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Coffee Lab"
+                android:textSize="14sp"
+                android:textColor="#2C1B14"
+                android:layout_marginStart="6dp"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+
+        </LinearLayout>
+
+        <!-- Expanded Content (Shows full details) -->
+        <LinearLayout
+            android:id="@+id/expandedContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp"
+            android:visibility="visible">
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#D4B895"
+                android:layout_marginBottom="12dp"/>
+
+            <!-- Full Description -->
+            <TextView
+                android:id="@+id/tvEventDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Join us for a relaxing afternoon of coding while enjoying freshly brewed coffee! Network with fellow developers and share your projects. Bring your laptop and your favorite coding project!"
+                android:textSize="14sp"
+                android:textColor="#261403"
+                android:lineSpacingExtra="4dp"/>
+
+            <!-- Deadline Info -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/deadline_bg"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⏰"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Registration Deadline: "
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="#2C1B14"
+                    android:layout_marginStart="8dp"/>
+
+                <TextView
+                    android:id="@+id/tvEventDeadline"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Mar 24, 2024, 11:59 PM"
+                    android:textSize="13sp"
+                    android:textColor="#8B5A2B"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+            <!-- Full Location -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📍"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tvEventLocationFull"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Engineering Building, Room 101, Coffee Lab"
+                    android:textSize="13sp"
+                    android:textColor="#2C1B14"
+                    android:layout_marginStart="8dp"/>
+
+            </LinearLayout>
+
+            <!-- Register Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnRegister"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/coffee_register_bg"
+                app:backgroundTint="@null"
+                android:text="☕ Register Now"
+                android:textSize="14sp"
+                android:textColor="#2C1B14"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <!-- Expand/Collapse Indicator (Static for UI) -->
+        <TextView
+            android:id="@+id/tvExpandIndicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="▼ Tap to expand ▼"
+            android:textSize="11sp"
+            android:textColor="#8B5A2B"
+            android:gravity="center"
+            android:layout_marginTop="12dp"
+            android:padding="4dp"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

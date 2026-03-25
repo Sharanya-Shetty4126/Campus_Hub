@@ -1,0 +1,22 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Pressed state -->
+    <item android:state_pressed="true">
+        <shape>
+            <solid android:color="#A67C52"/> <!-- light coffee -->
+            <corners android:radius="16dp"/>
+        </shape>
+    </item>
+
+    <!-- Default state -->
+    <item>
+        <shape>
+            <solid android:color="#D5C5B5"/> <!-- cream coffee -->
+            <corners android:radius="16dp"/>
+            <stroke
+                android:width="1dp"
+                android:color="#6F4E37"/> <!-- coffee border -->
+        </shape>
+    </item>
+
+</selector>
